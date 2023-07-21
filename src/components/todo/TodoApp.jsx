@@ -5,8 +5,8 @@ import './TodoApp.css'
 export default function TodoApp() {
     return(
         <div className="TodoApp">
-            <HeaderComponent/>
             <BrowserRouter>
+            <HeaderComponent/>
                 <Routes>
                 <Route path='/' element={<LoginComponent/>}/>
                     <Route path='/login' element={<LoginComponent/>}/>
@@ -15,8 +15,8 @@ export default function TodoApp() {
                     <Route path='/logout' element={<LogoutComponent/>}/>
                     <Route path='*' element={<ErrorComponent/>}/>
                 </Routes>
+                <FooterComponent/>
             </BrowserRouter>
-            <FooterComponent/>
         </div>
     )
 }
@@ -143,17 +143,27 @@ function ListTodosComponent() {
 
 function HeaderComponent() {
     return(
-        <div className="header">
-            Header <hr/>
-        </div>
+        <header className="header">
+            <div className="container">
+                <ul className="navbar-nav">
+                    <li className="nav-item"><a>Roshan</a></li>
+                    <li className="nav-item"><Link className="nav-link" to="/welcome/roshan">Home</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to="/todos">Todos</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to="/logout">Logout</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
+                </ul>
+            </div>
+        </header>
     )
 }
 
 function FooterComponent() {
     return(
-        <div className="footer">
-            <hr/> Footer
-        </div>
+        <footer className="footer">
+            <div className='container'>
+                Footer
+            </div>
+        </footer>
     )
 }
 
