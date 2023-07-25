@@ -32,7 +32,7 @@ export default function LoginComponent() {
     return(
         <div className="LoginComponent">
             <h1>Time to login!</h1>
-            {showErrorMessage && <div className='errorMessage'>Authenticated failed. please check your credentials</div>}
+            {showErrorMessage && <div className='errorMessage'>Authentication failed. please check your credentials</div>}
             <div className="LoginForm">
                 <div>
                     <label>User Name:</label>
