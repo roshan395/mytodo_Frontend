@@ -38,6 +38,11 @@ export default function ListTodosComponent() {
         navigate(`/todos/${id}`)
     }
 
+    function addNewTodo() {
+        console.log('new todo')
+        navigate(`/todos/-1`)
+    }
+
     return(
         <div className="container">
             <h1>Things you want to do!</h1>
@@ -72,6 +77,7 @@ export default function ListTodosComponent() {
                         
                     </tbody>
                 </table>
+                <div className="btn btn-success m-3" onClick={addNewTodo}>Add Todo</div>
             </div>
         </div>
     )
