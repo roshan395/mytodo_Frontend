@@ -8,11 +8,13 @@ export const retrieveHelloWorldBean
 = () => apiClient.get('/hello-world')
 
 export const retrieveHelloWorldPathVariable
-= (username, token) => apiClient.get(`/hello-world/path-variable/${username}`, {
-    headers: {
-        Authorization: token
-    }
-})
+= (username, token) => apiClient.get(`/hello-world/path-variable/${username}`
+// , {
+//     headers: {
+//         Authorization: token
+//     }
+//   }
+)
 
 export const executeBasicAuthService
 = (token) => apiClient.get(`/basic-auth`, {
