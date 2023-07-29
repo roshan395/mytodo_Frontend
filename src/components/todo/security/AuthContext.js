@@ -43,6 +43,8 @@ export default function AuthProvider({children}) {
                 apiClient.interceptors.request.use(
                     (config) => {
                         console.log('intercepting and adding token')
+                        config.headers.Authorization=baToken
+                        return config
                     }
                 )
 
